@@ -34,3 +34,9 @@ Add timestamp columns:
 ```
 $ /usr/bin/sqlite3 db.sqlite < timestamps.sql
 ```
+
+Group-by city:
+
+```
+$ /usr/bin/sqlite3 db.sqlite < group-city.sql
+```
