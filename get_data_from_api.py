@@ -4,7 +4,9 @@ import requests
 
 
 url = "https://crunchbase-crunchbase-v1.p.rapidapi.com/odm-organizations"
-querystring = {"locations": "Berlin"}
+#querystring = {"locations": "Berlin"}
+
+querystring = {'pagesize': "10"}
 headers = {
     'x-rapidapi-host': "crunchbase-crunchbase-v1.p.rapidapi.com",
     'x-rapidapi-key': "df8b647b2cmsh81bb0369bb5eed1p1d8a9cjsn39ae7bdb735d"

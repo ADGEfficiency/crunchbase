@@ -1,6 +1,6 @@
 # Crunchbase database
 
-Pipeline adventure to learn Python / SQLite
+[Pipeline](https://www.dataengineering.academy/) adventure to learn Python / SQLite using the [Crunchbase API](https://data.crunchbase.com/docs/using-the-api).
 
 ## Requirements
 
