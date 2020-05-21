@@ -10,6 +10,15 @@ Python, SQLite
 $ pip install -r requirements.txt
 ```
 
+Put your host & key in a file `keys.py`:
+
+```python
+headers = {
+    'x-rapidapi-host': "crunchbase-crunchbase-v1.p.rapidapi.com",
+    'x-rapidapi-key': "YOUR-KEY-HERE"
+    }
+```
+
 ## Usage
 
 Create `crunchbase.csv`:
