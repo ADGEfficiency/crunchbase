@@ -49,3 +49,13 @@ Group-by city:
 ```
 $ /usr/bin/sqlite3 db.sqlite < group-city.sql
 ```
+
+## Deployment
+
+After setting up `db.sqlite`:
+
+```bash
+docker build -t crunch:latest .
+
+docker run -d -p 5000:5000 crunch
+```

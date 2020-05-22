@@ -8,11 +8,11 @@ def hello_world():
     return 'Hello from Flask!'
 
 
-@app.route('/news/api/v1.0/source/<string:source>', methods=['GET'])
-def count_source(source):
+@app.route('/database/count', methods=['GET'])
+def count_source():
     sources = []
-    qry = "SELECT COUNT(*) FROM berlin WHERE source_id = '%s';" % (source)
-    con = sqlite3.connect('/home/soobrosa/berlin.sqlite')
+    qry = "SELECT COUNT(*) FROM crunch"
+    con = sqlite3.connect('./db.sqlite')
     c = con.cursor()
     c.execute(qry)
     rows = c.fetchall()
@@ -23,5 +23,6 @@ def count_source(source):
         abort(404)
     return jsonify({'source_count': sources[0]})
 
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
