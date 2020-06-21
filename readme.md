@@ -2,13 +2,12 @@
 
 [Pipeline](https://www.dataengineering.academy/) adventure to learn Python / SQLite / make / Flask / Docker using the [Crunchbase API](https://data.crunchbase.com/docs/using-the-api).
 
+App is hosted on [Python Anywhere](http://adamg33.pythonanywhere.com/).
+
 ## Requirements
 
 Python (Flask), SQLite, Docker
 
-```bash
-$ pip install -r requirements.txt
-```
 
 Put your Crunchbase host & key in a file `keys.py`:
 
@@ -21,10 +20,9 @@ headers = {
 
 ## Usage
 
-```bash
-$ make api sql docker
-```
+Setup 
 
 ```bash
-$ make app
+$ pip install -r requirements.txt
+$ make api sql docker
 ```

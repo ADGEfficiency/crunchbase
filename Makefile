@@ -1,6 +1,6 @@
 api:
 	# Create `./data/crunchbase.csv`:
-	python get_data_from_api.py
+	python3 get_data_from_api.py
 
 sql: ./data/crunchbase.csv
 	rm -rf ./data/db.sqlite
@@ -19,4 +19,4 @@ docker: ./data/db.sqlite
 	docker run -d -p 5000:5000 crunch
 
 app:
-	python app.py
+	python3 app.py
