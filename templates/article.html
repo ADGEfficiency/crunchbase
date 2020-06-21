@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block body %}
+  <div>
+    <p>You have {{count}} records - <a href="random">see a random record </a>- <a href=".">see all records.</a></p>
+    <p>Displaying a single, atomic unit is the foundation of an agile data science project.<p>    <p>Randomly selecting a record allows exploration of the data.</p>
+  <div>
+
+    <table class="table table-condensed table-striped">
+      <thead>
+        <th>Record</th>
+      </thead>
+      <tbody>
+        <td>{{record[0]}}</td>
+        <td>{{record[1]}}</td>
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

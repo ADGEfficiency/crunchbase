@@ -21,4 +21,4 @@ CREATE TABLE IF NOT EXISTS crunch(
 	updated_at BIGINT
 );
 .mode csv
-.import crunchbase.csv crunch
+.import ./data/crunchbase.csv crunch

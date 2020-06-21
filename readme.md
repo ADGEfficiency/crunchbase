@@ -1,16 +1,16 @@
 # Crunchbase database
 
-[Pipeline](https://www.dataengineering.academy/) adventure to learn Python / SQLite using the [Crunchbase API](https://data.crunchbase.com/docs/using-the-api).
+[Pipeline](https://www.dataengineering.academy/) adventure to learn Python / SQLite / make / Flask / Docker using the [Crunchbase API](https://data.crunchbase.com/docs/using-the-api).
 
 ## Requirements
 
-Python, SQLite
+Python (Flask), SQLite, Docker
 
-```
+```bash
 $ pip install -r requirements.txt
 ```
 
-Put your host & key in a file `keys.py`:
+Put your Crunchbase host & key in a file `keys.py`:
 
 ```python
 headers = {
@@ -21,41 +21,10 @@ headers = {
 
 ## Usage
 
-Create `crunchbase.csv`:
+```bash
+$ make api sql docker
+```
 
 ```bash
-$ python get_data_from_api.py
-```
-
-Create schema & load data into `db.sqlite`:
-
-```bash
-$ /usr/bin/sqlite3 db.sqlite < schema.sql
-```
-
-Inspect database:
-
-```bash
-$ /usr/bin/sqlite3 db.sqlite < inspect.sql
-```
-
-Add timestamp columns:
-```
-$ /usr/bin/sqlite3 db.sqlite < timestamps.sql
-```
-
-Group-by city:
-
-```
-$ /usr/bin/sqlite3 db.sqlite < group-city.sql
-```
-
-## Deployment
-
-After setting up `db.sqlite`:
-
-```bash
-docker build -t crunch:latest .
-
-docker run -d -p 5000:5000 crunch
+$ make app
 ```
